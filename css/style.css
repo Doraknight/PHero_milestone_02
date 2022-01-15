@@ -1,62 +1,318 @@
-/* common styles */
-
-body {
-    margin: 30px;
-}
-
-
-/* ------------------
+                        /* common styles */
+                
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+                 :root {
+                    --poppins: 'Poppins', sans-serif;
+                    --inter: 'Inter', sans-serif;
+                }
+                
+                body {
+                    margin: 30px;
+                }
+                
+                h3 {
+                    font-family: var(--poppins);
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                
+                .button {
+                    text-decoration: none;
+                    color: #FFFFFF;
+                    font-size: 16px;
+                    font-family: var(--poppins);
+                    font-weight: 700;
+                    width: 196;
+                    height: 44;
+                    background-color: #E02C6D;
+                    padding: 10px 24px;
+                    border-radius: 41px;
+                }
+                /* ------------------
 sytles for head part 
-  ------------------*/
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu {
-    padding: 0 20px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.page_title {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-
-/* --------------
- styles for section part
-   ------------------ */
-
-
-/* article part */
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-/* logos part */
-
-.logos {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-/* product list part all styles */
-
-.filled {
-    color: #FB8200;
-}
-
-.empty {}
+------------------*/
+                
+                header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                nav a {
+                    text-decoration: none;
+                    color: black;
+                }
+                
+                .menu {
+                    padding: 0 20px;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                /* --------------
+styles for section part
+------------------ */
+                /* article part */
+                
+                .article_title {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 52px;
+                    font-weight: 700;
+                    width: 582px;
+                    height: 133px;
+                    line-height: 70px;
+                    margin-bottom: 16px;
+                }
+                
+                .article_details {
+                    font-family: var(--poppins);
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 0;
+                    margin-bottom: 26px;
+                    padding-bottom: 10px;
+                    font-feature-settings: 'liga' off;
+                }
+                
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .container_part img {
+                    width: 440px;
+                    height: 414px;
+                }
+                /* logos part */
+                
+                .logos {
+                    display: flex;
+                    justify-content: center;
+                    border: 2px solid;
+                }
+                
+                .logo_img {
+                    padding: 0 30.5px;
+                }
+                /* product list part all styles */
+                
+                .filled {
+                    color: #FB8200;
+                }
+                /* main container part */
+                
+                .list_container {
+                    max-width: 1110px;
+                    margin: 0 auto;
+                    padding: 0 30px;
+                    margin-bottom: 110px;
+                }
+                
+                .title_tag {
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+                
+                .product_list {
+                    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    align-items: stretch;
+                    justify-items: center;
+                    gap: 30px;
+                }
+                
+                .product_details {
+                    /* width: 329px;
+    height: 476px;
+    border: 2px solid;
+    padding: 17px 15px 16px 14px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 15px;
+                    border-radius: 5px;
+                    box-shadow: -5px 10px 20px 5px rgba(0, 0, 0, 0.2);
+                }
+                
+                .product_list img {
+                    width: 100%;
+                }
+                
+                .name {
+                    font-family: var(--poppins);
+                    font-weight: 500;
+                    font-size: 28px;
+                    line-height: 40px;
+                    color: #18191F;
+                }
+                
+                .prices {
+                    font-family: var(--inter);
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: #000000 87%;
+                }
+                
+                .info {
+                    font-family: var(--inter);
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+                
+                .product_button {
+                    width: 100%;
+                    height: 90px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                
+                .product_button a {
+                    padding: 10px;
+                    color: #E02C6D;
+                    text-align: end;
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                
+                .product_details:hover {
+                    transform: scale(1.1);
+                }
+                
+                .product_details {
+                    transition: transform 0.2s ease;
+                }
+                /* ------
+       self part
+    ------------ */
+                
+                .self_part {
+                    margin-bottom: 150px;
+                }
+                
+                form {
+                    padding-right: 200px;
+                }
+                
+                .form_input {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                
+                .form_input input {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                }
+                /* -----------
+      footer
+      --------- */
+                
+                footer {
+                    background: #0a0826;
+                    padding-top: 50px;
+                    padding-bottom: 50px;
+                }
+                
+                .footer {
+                    color: white;
+                    width: 262px;
+                    height: 139px;
+                    margin: 0 auto;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                
+                .footer p {
+                    font-size: 14px;
+                }
+                
+                .icon {
+                    width: 176px;
+                    height: 32px;
+                    margin: 0 auto;
+                    padding: 5px;
+                    font-size: 25px;
+                    display: flex;
+                    gap: 16px;
+                    justify-content: space-evenly;
+                }
+                
+                .icon a {
+                    text-decoration: none;
+                }
+                /* -------------------
+               MEDIA QUARY
+---------------------------- */
+                
+                @media (max-width: 668px) {
+                    header {
+                        display: none;
+                    }
+                    .container_part img {
+                        width: 60%;
+                        order: 1;
+                    }
+                    .container {
+                        width: 100%;
+                        order: 2;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .container_part h1 {
+                        font-size: 28px;
+                        line-height: 40px;
+                        text-align: center;
+                    }
+                    .container_part p {
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+                    .product_list {
+                        grid-template-columns: repeat(1, 1fr);
+                        justify-content: center;
+                        align-items: center;
+                        height: fit-content;
+                    }
+                    .order_form {
+                        grid-template-columns: 1fr;
+                    }
+                    .order_img {
+                        display: block;
+                        margin: auto;
+                    }
+                    @media (min-width:669px) and (max-width:992px) {
+                        nav a {
+                            margin-right: 0;
+                            padding: 5px;
+                        }
+                        .container_part h1 {
+                            font-size: 40px;
+                            font-weight: 700;
+                            line-height: 52px;
+                        }
+                        .product_list {
+                            grid-template-columns: repeat(2, 1fr);
+                            justify-content: space-between;
+                        }
+                        .product_details {
+                            align-items: center;
+                        }
+                        .order_form {
+                            grid-template-columns: 1fr;
+                            width: 100%;
+                        }
+                        .order_img {
+                            display: block;
+                            margin: auto;
+                        }
